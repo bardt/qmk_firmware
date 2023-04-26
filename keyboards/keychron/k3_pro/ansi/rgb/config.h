@@ -16,6 +16,9 @@
 
 #pragma once
 
+#define TAPPING_TERM 250
+#define IGNORE_MOD_TAP_INTERRUPT yes
+
 #ifdef RGB_MATRIX_ENABLE
 /* RGB Matrix driver configuration */
 #    define DRIVER_COUNT 2
