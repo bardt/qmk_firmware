@@ -59,8 +59,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,
      ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,            ___X___,
      ___X___,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  ___X___,  ___X___,  ___X___,            ___X___,
-     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  ___X___,  ___X___,  TD(TD_NM),KC_EQL,   KC_LBRC,  KC_RBRC,  KC_GRAVE,           ___X___,            ___X___,
-     ___X___,            ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  KC_BSLS,            ___X___,  ___X___,  ___X___,
+     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  ___X___,  KC_BSLS,  TD(TD_NM),KC_EQL,   KC_LBRC,  KC_RBRC,  KC_GRAVE,           ___X___,            ___X___,
+     ___X___,            ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  KC_PIPE,  KC_UNDS,  KC_PLUS,  KC_LCBR,  KC_RCBR,            ___X___,  ___X___,  ___X___,
      ___X___,  ___X___,  ___X___,                                ___X___,                                MO(ALTER),___X___,  ___X___,  ___X___,  ___X___,  ___X___),
 
 [RAISE] = LAYOUT_ansi_84(
