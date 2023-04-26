@@ -18,6 +18,7 @@
 
 #define TAPPING_TERM 250
 #define IGNORE_MOD_TAP_INTERRUPT yes
+#define TAP_DANCE_ENABLE yes
 
 #ifdef RGB_MATRIX_ENABLE
 /* RGB Matrix driver configuration */

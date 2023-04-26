@@ -18,7 +18,7 @@
 
 // clang-format off
 enum layers{
-  BASE,ß
+  BASE,
   LOWER,
   RAISE,
   ALTER,
@@ -26,6 +26,15 @@ enum layers{
 };
 
 #define ___X___ XXXXXXX
+
+//Tap Dance Declarations
+enum {
+  TD_NM = 0,
+};
+//Tap Dance Definitions
+tap_dance_action_t tap_dance_actions[] = {
+  [TD_NM] = ACTION_TAP_DANCE_DOUBLE(KC_MINS, KC_PMNS) // -, Num -
+};
 
 const uint16_t MT_A = LSFT_T(KC_A);
 const uint16_t MT_S = LCTL_T(KC_S);
@@ -41,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ansi_84(
      ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,
      QK_GESC,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,            ___X___,
-     KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_PMNS,  ___X___,  ___X___,           ___X___,
+     KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     ___X___,  ___X___,  ___X___,            ___X___,
      TT(NAV),  MT_A,     MT_S,     MT_D,     MT_F,     KC_G,     KC_H,     MT_J,     MT_K,     MT_L,     MT_SCLN,  KC_QUOT,            KC_ENT,             ___X___,
      ___X___,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,            ___X___,  ___X___,  ___X___,
      ___X___,  ___X___,  MO(LOWER),                              KC_SPC,                                 MO(RAISE),___X___,  ___X___,  ___X___,  ___X___,  ___X___),
@@ -50,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,
      ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,            ___X___,
      ___X___,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  ___X___,  ___X___,  ___X___,            ___X___,
-     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  ___X___,  ___X___,  KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_GRAVE,           ___X___,            ___X___,
+     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  ___X___,  ___X___,  TD(TD_NM),KC_EQL,   KC_LBRC,  KC_RBRC,  KC_GRAVE,           ___X___,            ___X___,
      ___X___,            ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  KC_BSLS,            ___X___,  ___X___,  ___X___,
      ___X___,  ___X___,  ___X___,                                ___X___,                                MO(ALTER),___X___,  ___X___,  ___X___,  ___X___,  ___X___),
 
@@ -64,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [ALTER] = LAYOUT_ansi_84(
      ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,
-     QK_BOOT,  KC_BRID,  KC_BRIU,  KC_MCTL,  KC_LNPD,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  ___X___,            ___X___,
+     QK_BOOT,  KC_BRID,  KC_BRIU,  KC_MCTL,  KC_LPAD,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  ___X___,            ___X___,
      RGB_TOG,  BT_HST1,  BT_HST2,  BT_HST3,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  ___X___,  ___X___,  ___X___,  ___X___,  ___X___,            ___X___,
      KC_TRNS,  ___X___,  ___X___,  ___X___,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  ___X___,  ___X___,  ___X___,            KC_TRNS,            ___X___,
      KC_TRNS,            ___X___,  ___X___,  ___X___,  ___X___,  BAT_LVL,  NK_TOGG,  ___X___,  ___X___,  ___X___,  ___X___,            KC_TRNS,  ___X___,  ___X___,
